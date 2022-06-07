@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Recipe {
+  """Identity"""
+  id: Int!
+
+  """Name"""
+  name: String!
+
+  """Description"""
+  description: String!
+
+  """Image"""
+  image: String!
+
+  """Ingredients"""
+  ingredients: [String!]!
+}
+
+type Query {
+  recipes: [Recipe!]!
+  recipe(id: Int!): Recipe!
+}
+
+type Mutation {
+  createRecipe(createRecipeInput: CreateRecipeInput!): Recipe!
+  updateRecipe(updateRecipeInput: UpdateRecipeInput!, id: Float!): Recipe!
+  removeRecipe(id: Int!): Recipe!
+}
+
+input CreateRecipeInput {
+  """Name"""
+  name: String!
+
+  """Description"""
+  description: String!
+
+  """Image"""
+  image: String!
+
+  """Ingredients"""
+  ingredients: [String!]!
+}
+
+input UpdateRecipeInput {
+  """Name"""
+  name: String!
+
+  """Description"""
+  description: String!
+
+  """Image"""
+  image: String!
+
+  """Ingredients"""
+  ingredients: [String!]!
+}
